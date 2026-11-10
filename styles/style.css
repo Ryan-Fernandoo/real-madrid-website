@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 65px;
+    align-items: center;
+    background-color: #0b1c3d;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 25px;
+    height: auto;
+}
+.logo h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family: monospace;
+    font-size: 19px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger:hover span{
+    background-color: #FFD700;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.hero {
+    height: 90vh;
+    background-image: url("../gambar/hero.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 45px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .hero-content {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 33px;
+    letter-spacing: 1.5px;
+}
+
+main {
+    padding: 80px 65px;
+}
+
+.top-layout {
+    display: flex;
+    background-color: #f5f7fa;
+    padding: 60px;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    border-radius: 20px;
+}
+
+#tentang img {
+    border-radius: 18px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.top-content {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+    padding: 25px;
+    border-left: 3px solid #e5e5e5;
+    padding-left: 30px;
+}
+
+#tentang h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    position: relative;
+}
+
+#tentang h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background-color: #FFD700;
+    display: block;
+    margin-top: 10px;
+}
+
+#tentang p {
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'poppins', sans-serif;
+}
+
+.profile-card header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-logo {
+    width: 120px;
+    margin: 20px auto;
+    display: block;
+}
+
+.profile table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.profile th {
+    text-align: left;
+    padding: 8px 0;
+    font-weight: 600;
+    color: #555;
+}
+
+.profile td {
+    padding: 8px 0;
+    color: #222;
+}
+
+#prestasi {
+    margin-top: 110px;
+    margin-bottom: 80px;
+}
+
+#prestasi h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .featured-image {
+    transform: scale(1.05);
+}
+
+.featured-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.jumlah {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.section-divider {
+    height: 80px;
+    background-color: #e5e7eb;
+}
+
+#stadion {
+    margin-bottom: 100px;
+    background-color: white;
+    padding-top: 30px;
+}
+
+#stadion h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+#stadion figure {
+    margin-bottom: 20px;
+}
+
+#stadion img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+#stadion figcaption {
+    font-size: 18px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+#stadion p {
+    font-size: 20px;
+}
+
+footer {
+    justify-content: space-between;
+    display: flex;
+    background-color: #0b1c3d;
+    color: white;
+    padding: 20px 60px;
+    flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;;
+        position: absolute;
+        background-color: #0b1c3d;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        padding: 20px 25px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo img {
+        width: 25px;
+    }
+
+    .logo h2 {
+        font-size: 24px;
+    }
+
+    .hero {
+        height: 55vh;
+        padding: 25px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 60px 25px;
+    }
+
+    #tentang img {
+        height: 250px;
+    }
+    
+    aside {
+        margin-top: 40px;
+        border-left: none;
+    }
+
+    .top-layout {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-divider {
+        height: 40px;
+    }
+
+    #stadion p {
+        font-size: 16px;
+    }
+
+    footer {
+        text-align: center;
+        gap: 10px;
+        flex-direction: column;
+        padding: 20px;
+    }
+}
